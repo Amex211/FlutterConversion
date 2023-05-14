@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
 class Scene extends StatelessWidget {
+  const Scene({super.key});
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Container(
         // iphone1421KB (5:2)
         width: double.infinity,
         height: 844*fem,
-        decoration: BoxDecoration (
+        decoration: const BoxDecoration (
           color: Color(0xffffffff),
         ),
         child: Stack(
@@ -25,7 +24,7 @@ class Scene extends StatelessWidget {
               // group38Po (5:168)
               left: 0*fem,
               top: 784*fem,
-              child: Container(
+              child: SizedBox(
                 width: 390*fem,
                 height: 66*fem,
                 child: Stack(
@@ -39,7 +38,7 @@ class Scene extends StatelessWidget {
                           width: 390*fem,
                           height: 57*fem,
                           child: Container(
-                            decoration: BoxDecoration (
+                            decoration: const BoxDecoration (
                               color: Color(0xff9de8df),
                             ),
                           ),
@@ -166,7 +165,7 @@ class Scene extends StatelessWidget {
                         padding: EdgeInsets.fromLTRB(1.54*fem, 1.38*fem, 1.54*fem, 1.38*fem),
                         width: 55.5*fem,
                         height: 41.25*fem,
-                        decoration: BoxDecoration (
+                        decoration: const BoxDecoration (
                           image: DecorationImage (
                             fit: BoxFit.cover,
                             image: AssetImage (
@@ -177,7 +176,7 @@ class Scene extends StatelessWidget {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Container(
+                            SizedBox(
                               // autogroup1r8z4Vj (6H5TsMR7jC3NynHgLk1R8Z)
                               width: 26.21*fem,
                               height: 38.5*fem,
@@ -187,7 +186,7 @@ class Scene extends StatelessWidget {
                                 height: 38.5*fem,
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               // autogroupsa69NWR (6H5Txw69jwG7jSd3CCSA69)
                               width: 26.21*fem,
                               height: 38.5*fem,
@@ -209,7 +208,7 @@ class Scene extends StatelessWidget {
               // group4V5F (5:171)
               left: 0*fem,
               top: 0*fem,
-              child: Container(
+              child: SizedBox(
                 width: 390*fem,
                 height: 124*fem,
                 child: Stack(
@@ -221,18 +220,18 @@ class Scene extends StatelessWidget {
                       child: Container(
                         width: 390*fem,
                         height: 121.86*fem,
-                        decoration: BoxDecoration (
+                        decoration: const BoxDecoration (
                           color: Color(0xff9de8df),
                         ),
                         child: Center(
                           child: Text(
                             'Thieme Books',
-                            style: SafeGoogleFont (
+                            style: safeGoogleFont (
                               'Inter',
                               fontSize: 32*ffem,
                               fontWeight: FontWeight.w700,
                               height: 1.2125*ffem/fem,
-                              color: Color(0xffffffff),
+                              color: const Color(0xffffffff),
                             ),
                           ),
                         ),
@@ -272,7 +271,7 @@ class Scene extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(6*fem, 7.39*fem, 8*fem, 0.04*fem),
                 width: 177*fem,
                 height: 268*fem,
-                decoration: BoxDecoration (
+                decoration: const BoxDecoration (
                   color: Color(0xffffffff),
                 ),
                 child: Column(
@@ -281,7 +280,7 @@ class Scene extends StatelessWidget {
                     Container(
                       // group615X (5:679)
                       width: double.infinity,
-                      decoration: BoxDecoration (
+                      decoration: const BoxDecoration (
                         color: Color(0xffd9d9d9),
                       ),
                       child: Center(
@@ -299,12 +298,12 @@ class Scene extends StatelessWidget {
                     Text(
                       // title5LH (5:682)
                       'Title',
-                      style: SafeGoogleFont (
+                      style: safeGoogleFont (
                         'Inter',
                         fontSize: 32*ffem,
                         fontWeight: FontWeight.w700,
                         height: 1.2125*ffem/fem,
-                        color: Color(0xff000000),
+                        color: const Color(0xff000000),
                       ),
                     ),
                   ],
@@ -329,12 +328,12 @@ class Scene extends StatelessWidget {
                       ),
                       child: Text(
                         'Pathologie ist ein Zweig der Medizin, der sich mit der Untersuchung von Krankheiten und deren Ursachen befasst. Das Wort "Pathologie" stammt aus dem Griechischen und bedeutet "die Lehre von den Leiden". Pathologen sind Ärzte, die sich auf die Diagnose von Krankheiten durch die Untersuchung von Gewebeproben und Körperflüssigkeiten spezialisiert haben.\nDie Pathologie spielt eine wichtige Rolle in der Medizin, da sie es den Ärzten ermöglicht, die Ursachen von Krankheiten zu verstehen und entsprechende Behandlungen zu planen. Die Diagnose einer Krankheit beruht oft auf der Untersuchung von Gewebeproben oder Körperflüssigkeiten, die von einem Pathologen untersucht werden.\nDie Pathologie kann in verschiedene Bereiche unterteilt werden, darunter die anatomische Pathologie, die klinische Pathologie und die molekulare Pathologie. Die anatomische Pathologie befasst sich mit der Untersuchung von Gewebeproben, die bei Operationen oder Biopsien entnommen werden. Die klinische Pathologie befasst sich mit der Untersuchung von Körperflüssigkeiten wie Blut, Urin oder Liquor. Die molekulare Pathologie befasst sich mit der Untersuchung von Genen und Proteinen, um die Ursachen von Krankheiten auf molekularer Ebene zu verstehen.\nDie Untersuchung von Gewebeproben und Körperflüssigkeiten erfolgt durch verschiedene Techniken wie Mikroskopie, Immunhistochemie und Molekularbiologie. Der Pathologe untersucht das Gewebe oder die Körperflüssigkeit unter dem Mikroskop, um Anomalien wie Krebszellen oder Entzündungen zu identifizieren. Die Immunhistochemie wird verwendet, um spezifische Proteine im Gewebe zu identifizieren, die bei der Diagnose von Krankheiten hilfreich sein können. Die Molekularbiologie wird verwendet, um Gene und Proteine auf molekularer Ebene zu untersuchen, um die Ursachen von Krankheiten besser zu verstehen.\nPathologen arbeiten eng mit anderen Ärzten zusammen, um die Diagnose und Behandlung von Krankheiten zu verbessern. Sie können beispielsweise bei der Identifizierung von Krebszellen in einem Gewebeproben helfen oder bei der Diagnose von Infektionskrankheiten durch die Untersuchung von Körperflüssigkeiten helfen.\nIn der Forensik spielt die Pathologie ebenfalls eine wichtige Rolle. Pathologen können bei der Untersuchung von Gewebeproben und Körperflüssigkeiten helfen, um die Todesursache und andere wichtige Informationen in Fällen von Mord, Selbstmord oder Unfall zu identifizieren.\nInsgesamt ist die Pathologie ein wichtiger Zweig der Medizin, der Ärzten und Wissenschaftlern dabei hilft, Krankheiten besser zu verstehen und effektivere Behandlungen zu entwickeln. Durch die Untersuchung von Gewebeproben und Körperflüssigkeiten können Pathologen dazu beitragen, Leben zu retten und die Lebensqualität von Patienten zu verbessern.',
-                        style: SafeGoogleFont (
+                        style: safeGoogleFont (
                           'Inter',
                           fontSize: 25*ffem,
                           fontWeight: FontWeight.w700,
                           height: 1.2125*ffem/fem,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),

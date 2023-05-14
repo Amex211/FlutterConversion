@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
 class Scene extends StatelessWidget {
+  const Scene({super.key});
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Container(
         // iphone141evH (4:2)
         width: double.infinity,
-        decoration: BoxDecoration (
+        decoration: const BoxDecoration (
           color: Color(0xffffffff),
         ),
         child: Column(
@@ -26,7 +25,7 @@ class Scene extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(4*fem, 36.9*fem, 86*fem, 0.08*fem),
               width: double.infinity,
               height: 124*fem,
-              decoration: BoxDecoration (
+              decoration: const BoxDecoration (
                 color: Color(0xff9de8df),
               ),
               child: Row(
@@ -37,7 +36,7 @@ class Scene extends StatelessWidget {
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 30*fem, 0*fem),
                     padding: EdgeInsets.fromLTRB(10*fem, 25.38*fem, 10*fem, 25.38*fem),
                     height: double.infinity,
-                    child: Column(
+                    child: const Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                     ),
                   ),
@@ -46,12 +45,12 @@ class Scene extends StatelessWidget {
                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 24.4*fem),
                     child: Text(
                       'Thieme Books',
-                      style: SafeGoogleFont (
+                      style: safeGoogleFont (
                         'Inter',
                         fontSize: 32*ffem,
                         fontWeight: FontWeight.w700,
                         height: 1.2125*ffem/fem,
-                        color: Color(0xffffffff),
+                        color: const Color(0xffffffff),
                       ),
                     ),
                   ),
@@ -68,9 +67,10 @@ class Scene extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(8*fem, 11*fem, 8*fem, 9*fem),
                 width: double.infinity,
                 height: 1847*fem,
-                decoration: BoxDecoration (
+                decoration: const BoxDecoration (
                   color: Color(0xffd9d9d9),
                 ),
+                child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -90,7 +90,7 @@ class Scene extends StatelessWidget {
                               style: TextButton.styleFrom (
                                 padding: EdgeInsets.zero,
                               ),
-                              child: Container(
+                              child: SizedBox(
                                 width: 177*fem,
                                 height: double.infinity,
                                 child: Stack(
@@ -104,7 +104,7 @@ class Scene extends StatelessWidget {
                                           width: 177*fem,
                                           height: 254*fem,
                                           child: Container(
-                                            decoration: BoxDecoration (
+                                            decoration: const BoxDecoration (
                                               color: Color(0xffffffff),
                                             ),
                                           ),
@@ -118,7 +118,7 @@ class Scene extends StatelessWidget {
                                       child: Container(
                                         width: 163*fem,
                                         height: 210*fem,
-                                        decoration: BoxDecoration (
+                                        decoration: const BoxDecoration (
                                           color: Color(0xffd9d9d9),
                                         ),
                                         child: Center(
@@ -144,12 +144,12 @@ class Scene extends StatelessWidget {
                                           height: 39*fem,
                                           child: Text(
                                             'Title',
-                                            style: SafeGoogleFont (
+                                            style: safeGoogleFont (
                                               'Inter',
                                               fontSize: 32*ffem,
                                               fontWeight: FontWeight.w700,
                                               height: 1.2125*ffem/fem,
-                                              color: Color(0xff000000),
+                                              color: const Color(0xff000000),
                                             ),
                                           ),
                                         ),
@@ -164,7 +164,7 @@ class Scene extends StatelessWidget {
                                         style: TextButton.styleFrom (
                                           padding: EdgeInsets.zero,
                                         ),
-                                        child: Container(
+                                        child: SizedBox(
                                           width: 177*fem,
                                           height: 256*fem,
                                           child: Stack(
@@ -178,7 +178,7 @@ class Scene extends StatelessWidget {
                                                     width: 177*fem,
                                                     height: 254*fem,
                                                     child: Container(
-                                                      decoration: BoxDecoration (
+                                                      decoration: const BoxDecoration (
                                                         color: Color(0xffffffff),
                                                       ),
                                                     ),
@@ -193,7 +193,7 @@ class Scene extends StatelessWidget {
                                                   padding: EdgeInsets.fromLTRB(2*fem, 38*fem, 2*fem, 72*fem),
                                                   width: 163*fem,
                                                   height: 210*fem,
-                                                  decoration: BoxDecoration (
+                                                  decoration: const BoxDecoration (
                                                     color: Color(0xffd9d9d9),
                                                   ),
                                                   child: Align(
@@ -220,13 +220,13 @@ class Scene extends StatelessWidget {
                                                     width: 71*fem,
                                                     height: 39*fem,
                                                     child: Text(
-                                                      'Title',
-                                                      style: SafeGoogleFont (
+                                                      'Titleee',
+                                                      style: safeGoogleFont (
                                                         'Inter',
                                                         fontSize: 32*ffem,
                                                         fontWeight: FontWeight.w700,
                                                         height: 1.2125*ffem/fem,
-                                                        color: Color(0xff000000),
+                                                        color: const Color(0xff000000),
                                                       ),
                                                     ),
                                                   ),
@@ -242,7 +242,7 @@ class Scene extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             // groupfilenJy (I12:160;5:227)
                             width: 177*fem,
                             height: double.infinity,
@@ -257,7 +257,7 @@ class Scene extends StatelessWidget {
                                       width: 177*fem,
                                       height: 254*fem,
                                       child: Container(
-                                        decoration: BoxDecoration (
+                                        decoration: const BoxDecoration (
                                           color: Color(0xffffffff),
                                         ),
                                       ),
@@ -271,7 +271,7 @@ class Scene extends StatelessWidget {
                                   child: Container(
                                     width: 163*fem,
                                     height: 210*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffd9d9d9),
                                     ),
                                     child: Center(
@@ -296,13 +296,13 @@ class Scene extends StatelessWidget {
                                       width: 71*fem,
                                       height: 39*fem,
                                       child: Text(
-                                        'Title',
-                                        style: SafeGoogleFont (
+                                        'Titleee',
+                                        style: safeGoogleFont (
                                           'Inter',
                                           fontSize: 32*ffem,
                                           fontWeight: FontWeight.w700,
                                           height: 1.2125*ffem/fem,
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                         ),
                                       ),
                                     ),
@@ -338,7 +338,7 @@ class Scene extends StatelessWidget {
                                       width: 177*fem,
                                       height: 254*fem,
                                       child: Container(
-                                        decoration: BoxDecoration (
+                                        decoration: const BoxDecoration (
                                           color: Color(0xffffffff),
                                         ),
                                       ),
@@ -352,7 +352,7 @@ class Scene extends StatelessWidget {
                                   child: Container(
                                     width: 163*fem,
                                     height: 210*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffd9d9d9),
                                     ),
                                     child: Center(
@@ -378,12 +378,12 @@ class Scene extends StatelessWidget {
                                       height: 39*fem,
                                       child: Text(
                                         'Title',
-                                        style: SafeGoogleFont (
+                                        style: safeGoogleFont (
                                           'Inter',
                                           fontSize: 32*ffem,
                                           fontWeight: FontWeight.w700,
                                           height: 1.2125*ffem/fem,
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                         ),
                                       ),
                                     ),
@@ -392,7 +392,7 @@ class Scene extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             // groupfile9z5 (I12:160;5:178)
                             width: 177*fem,
                             height: double.infinity,
@@ -407,7 +407,7 @@ class Scene extends StatelessWidget {
                                       width: 177*fem,
                                       height: 254*fem,
                                       child: Container(
-                                        decoration: BoxDecoration (
+                                        decoration: const BoxDecoration (
                                           color: Color(0xffffffff),
                                         ),
                                       ),
@@ -421,7 +421,7 @@ class Scene extends StatelessWidget {
                                   child: Container(
                                     width: 163*fem,
                                     height: 210*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffd9d9d9),
                                     ),
                                     child: Center(
@@ -447,12 +447,12 @@ class Scene extends StatelessWidget {
                                       height: 39*fem,
                                       child: Text(
                                         'Title',
-                                        style: SafeGoogleFont (
+                                        style: safeGoogleFont (
                                           'Inter',
                                           fontSize: 32*ffem,
                                           fontWeight: FontWeight.w700,
                                           height: 1.2125*ffem/fem,
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                         ),
                                       ),
                                     ),
@@ -477,7 +477,7 @@ class Scene extends StatelessWidget {
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 16*fem, 0*fem),
                             width: 177*fem,
                             height: double.infinity,
-                            decoration: BoxDecoration (
+                            decoration: const BoxDecoration (
                               color: Color(0xffffffff),
                             ),
                             child: Stack(
@@ -489,7 +489,7 @@ class Scene extends StatelessWidget {
                                   child: Container(
                                     width: 163*fem,
                                     height: 210*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffd9d9d9),
                                     ),
                                     child: Center(
@@ -515,12 +515,12 @@ class Scene extends StatelessWidget {
                                       height: 39*fem,
                                       child: Text(
                                         'Title',
-                                        style: SafeGoogleFont (
+                                        style: safeGoogleFont (
                                           'Inter',
                                           fontSize: 32*ffem,
                                           fontWeight: FontWeight.w700,
                                           height: 1.2125*ffem/fem,
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                         ),
                                       ),
                                     ),
@@ -534,7 +534,7 @@ class Scene extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                                     width: 177*fem,
                                     height: 256*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffffffff),
                                     ),
                                     child: Column(
@@ -543,7 +543,7 @@ class Scene extends StatelessWidget {
                                         Container(
                                           // group6D2D (I12:160;5:258)
                                           width: double.infinity,
-                                          decoration: BoxDecoration (
+                                          decoration: const BoxDecoration (
                                             color: Color(0xffd9d9d9),
                                           ),
                                           child: Center(
@@ -561,12 +561,12 @@ class Scene extends StatelessWidget {
                                         Text(
                                           // titlehi5 (I12:160;5:261)
                                           'Title',
-                                          style: SafeGoogleFont (
+                                          style: safeGoogleFont (
                                             'Inter',
                                             fontSize: 32*ffem,
                                             fontWeight: FontWeight.w700,
                                             height: 1.2125*ffem/fem,
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                           ),
                                         ),
                                       ],
@@ -581,7 +581,7 @@ class Scene extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                             width: 177*fem,
                             height: double.infinity,
-                            decoration: BoxDecoration (
+                            decoration: const BoxDecoration (
                               color: Color(0xffffffff),
                             ),
                             child: Column(
@@ -590,7 +590,7 @@ class Scene extends StatelessWidget {
                                 Container(
                                   // group6mhw (I12:160;5:223)
                                   width: double.infinity,
-                                  decoration: BoxDecoration (
+                                  decoration: const BoxDecoration (
                                     color: Color(0xffd9d9d9),
                                   ),
                                   child: Center(
@@ -608,12 +608,12 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // title5Cq (I12:160;5:226)
                                   'Title',
-                                  style: SafeGoogleFont (
+                                  style: safeGoogleFont (
                                     'Inter',
                                     fontSize: 32*ffem,
                                     fontWeight: FontWeight.w700,
                                     height: 1.2125*ffem/fem,
-                                    color: Color(0xff000000),
+                                    color: const Color(0xff000000),
                                   ),
                                 ),
                               ],
@@ -645,7 +645,7 @@ class Scene extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                                     width: 177*fem,
                                     height: 256*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffffffff),
                                     ),
                                     child: Column(
@@ -654,7 +654,7 @@ class Scene extends StatelessWidget {
                                         Container(
                                           // group6Jzh (I12:160;5:209)
                                           width: double.infinity,
-                                          decoration: BoxDecoration (
+                                          decoration: const BoxDecoration (
                                             color: Color(0xffd9d9d9),
                                           ),
                                           child: Center(
@@ -672,12 +672,12 @@ class Scene extends StatelessWidget {
                                         Text(
                                           // titlebiu (I12:160;5:212)
                                           'Title',
-                                          style: SafeGoogleFont (
+                                          style: safeGoogleFont (
                                             'Inter',
                                             fontSize: 32*ffem,
                                             fontWeight: FontWeight.w700,
                                             height: 1.2125*ffem/fem,
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                           ),
                                         ),
                                       ],
@@ -692,7 +692,7 @@ class Scene extends StatelessWidget {
                                     padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                                     width: 177*fem,
                                     height: 256*fem,
-                                    decoration: BoxDecoration (
+                                    decoration: const BoxDecoration (
                                       color: Color(0xffffffff),
                                     ),
                                     child: Column(
@@ -701,7 +701,7 @@ class Scene extends StatelessWidget {
                                         Container(
                                           // group6qNM (I12:160;5:237)
                                           width: double.infinity,
-                                          decoration: BoxDecoration (
+                                          decoration: const BoxDecoration (
                                             color: Color(0xffd9d9d9),
                                           ),
                                           child: Center(
@@ -719,12 +719,12 @@ class Scene extends StatelessWidget {
                                         Text(
                                           // titlewgH (I12:160;5:240)
                                           'Title',
-                                          style: SafeGoogleFont (
+                                          style: safeGoogleFont (
                                             'Inter',
                                             fontSize: 32*ffem,
                                             fontWeight: FontWeight.w700,
                                             height: 1.2125*ffem/fem,
-                                            color: Color(0xff000000),
+                                            color: const Color(0xff000000),
                                           ),
                                         ),
                                       ],
@@ -734,7 +734,7 @@ class Scene extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             // autogroupd5smJFw (6H5RBBQLenWRVgtSPXd5Sm)
                             width: 177*fem,
                             height: double.infinity,
@@ -746,7 +746,7 @@ class Scene extends StatelessWidget {
                                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 6*fem),
                                   padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                                   width: double.infinity,
-                                  decoration: BoxDecoration (
+                                  decoration: const BoxDecoration (
                                     color: Color(0xffffffff),
                                   ),
                                   child: Column(
@@ -755,7 +755,7 @@ class Scene extends StatelessWidget {
                                       Container(
                                         // group6wph (I12:160;5:216)
                                         width: double.infinity,
-                                        decoration: BoxDecoration (
+                                        decoration: const BoxDecoration (
                                           color: Color(0xffd9d9d9),
                                         ),
                                         child: Center(
@@ -773,12 +773,12 @@ class Scene extends StatelessWidget {
                                       Text(
                                         // titledSd (I12:160;5:219)
                                         'Title',
-                                        style: SafeGoogleFont (
+                                        style: safeGoogleFont (
                                           'Inter',
                                           fontSize: 32*ffem,
                                           fontWeight: FontWeight.w700,
                                           height: 1.2125*ffem/fem,
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                         ),
                                       ),
                                     ],
@@ -788,7 +788,7 @@ class Scene extends StatelessWidget {
                                   // groupfilen4d (I12:160;5:199)
                                   padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                                   width: double.infinity,
-                                  decoration: BoxDecoration (
+                                  decoration: const BoxDecoration (
                                     color: Color(0xffffffff),
                                   ),
                                   child: Column(
@@ -797,7 +797,7 @@ class Scene extends StatelessWidget {
                                       Container(
                                         // group6u9F (I12:160;5:202)
                                         width: double.infinity,
-                                        decoration: BoxDecoration (
+                                        decoration: const BoxDecoration (
                                           color: Color(0xffd9d9d9),
                                         ),
                                         child: Center(
@@ -815,12 +815,12 @@ class Scene extends StatelessWidget {
                                       Text(
                                         // titleBcZ (I12:160;5:205)
                                         'Title',
-                                        style: SafeGoogleFont (
+                                        style: safeGoogleFont (
                                           'Inter',
                                           fontSize: 32*ffem,
                                           fontWeight: FontWeight.w700,
                                           height: 1.2125*ffem/fem,
-                                          color: Color(0xff000000),
+                                          color: const Color(0xff000000),
                                         ),
                                       ),
                                     ],
@@ -846,7 +846,7 @@ class Scene extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                             width: 177*fem,
                             height: double.infinity,
-                            decoration: BoxDecoration (
+                            decoration: const BoxDecoration (
                               color: Color(0xffffffff),
                             ),
                             child: Column(
@@ -855,7 +855,7 @@ class Scene extends StatelessWidget {
                                 Container(
                                   // group6m4y (I12:160;5:272)
                                   width: double.infinity,
-                                  decoration: BoxDecoration (
+                                  decoration: const BoxDecoration (
                                     color: Color(0xffd9d9d9),
                                   ),
                                   child: Center(
@@ -873,12 +873,12 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // titlefAM (I12:160;5:275)
                                   'Title',
-                                  style: SafeGoogleFont (
+                                  style: safeGoogleFont (
                                     'Inter',
                                     fontSize: 32*ffem,
                                     fontWeight: FontWeight.w700,
                                     height: 1.2125*ffem/fem,
-                                    color: Color(0xff000000),
+                                    color: const Color(0xff000000),
                                   ),
                                 ),
                               ],
@@ -889,7 +889,7 @@ class Scene extends StatelessWidget {
                             padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                             width: 177*fem,
                             height: double.infinity,
-                            decoration: BoxDecoration (
+                            decoration: const BoxDecoration (
                               color: Color(0xffffffff),
                             ),
                             child: Column(
@@ -898,7 +898,7 @@ class Scene extends StatelessWidget {
                                 Container(
                                   // group6vc5 (I12:160;5:265)
                                   width: double.infinity,
-                                  decoration: BoxDecoration (
+                                  decoration: const BoxDecoration (
                                     color: Color(0xffd9d9d9),
                                   ),
                                   child: Center(
@@ -916,12 +916,12 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // title2QD (I12:160;5:268)
                                   'Title',
-                                  style: SafeGoogleFont (
+                                  style: safeGoogleFont (
                                     'Inter',
                                     fontSize: 32*ffem,
                                     fontWeight: FontWeight.w700,
                                     height: 1.2125*ffem/fem,
-                                    color: Color(0xff000000),
+                                    color: const Color(0xff000000),
                                   ),
                                 ),
                               ],
@@ -930,11 +930,11 @@ class Scene extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
+          Container(
                       // groupfileB2D (I12:160;5:185)
                       padding: EdgeInsets.fromLTRB(6*fem, 7*fem, 8*fem, 0*fem),
                       width: 177*fem,
-                      decoration: BoxDecoration (
+                      decoration: const BoxDecoration (
                         color: Color(0xffffffff),
                       ),
                       child: Column(
@@ -943,7 +943,7 @@ class Scene extends StatelessWidget {
                           Container(
                             // group6thK (I12:160;5:188)
                             width: double.infinity,
-                            decoration: BoxDecoration (
+                            decoration: const BoxDecoration (
                               color: Color(0xffd9d9d9),
                             ),
                             child: Center(
@@ -961,22 +961,23 @@ class Scene extends StatelessWidget {
                           Text(
                             // titlePty (I12:160;5:191)
                             'Title',
-                            style: SafeGoogleFont (
+                            style: safeGoogleFont (
                               'Inter',
                               fontSize: 32*ffem,
                               fontWeight: FontWeight.w700,
                               height: 1.2125*ffem/fem,
-                              color: Color(0xff000000),
+                              color: const Color(0xff000000),
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ],
-                ),
-              ),
+                  ]
+                )
+                )
+              )
             ),
-            Container(
+            SizedBox(
               // group297T (5:167)
               width: 390*fem,
               height: 66*fem,
@@ -986,9 +987,9 @@ class Scene extends StatelessWidget {
                 height: 66*fem,
               ),
             ),
-          ],
-        ),
-      ),
-          );
+          ]
+        )
+      )
+    );
   }
 }
